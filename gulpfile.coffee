@@ -15,8 +15,6 @@ onCoffeelintFailure = (numberOfWarnings, numberOfErrors) =>
             Error count: #{numberOfErrors}.
     """
 
-gulp.task 'default', ['compile']
-
 gulp.task 'compile', =>
     gulp.src(scripts)
         .pipe($.coffeelint(optFile: coffeeLintRules))
@@ -25,7 +23,11 @@ gulp.task 'compile', =>
         .pipe($.coffee({bare:true}))
         .pipe(gulp.dest('./dist'))
 
-gulp.task 'test', ['compile'], =>
+gulp.task 'test', gulp.series('compile', =>
     gulp.src(tests)
         .pipe $.mocha
             reporter: 'spec'
+)
+
+gulp.task 'default', gulp.series('compile')
+
