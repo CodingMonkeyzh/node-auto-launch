@@ -4,7 +4,7 @@ Winreg  = require 'winreg'
 
 
 regKey = new Winreg
-    hive: Winreg.HKCU
+    hive: if process.arch == 'x64' then Winreg.HKLM else Winreg.HKCU
     key: if process.arch == 'x64' then '\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Run' else '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'
 
 
