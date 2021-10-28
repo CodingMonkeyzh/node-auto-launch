@@ -1,3 +1,2 @@
 node_modules
-# ignore cause i can't publish to the official npm
-# dist
+.idea

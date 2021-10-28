@@ -1,5 +1,5 @@
 {
-  "name": "auto-launch",
+  "name": "@donkey/auto-launch",
   "version": "5.0.6",
   "description": "Launch node applications or executables at login (Mac, Windows, and Linux)",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/4ver/node-auto-launch"
+    "url": "https://github.com/CodingMonkeyzh/node-auto-launch"
   },
   "keywords": [
     "login",
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/4ver/node-auto-launch/issues"
+    "url": "https://github.com/CodingMonkeyzh/node-auto-launch/issues"
   },
   "devDependencies": {
     "chai": "^4.2.0",
